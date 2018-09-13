@@ -1,0 +1,9 @@
+ 	1. Pentru acest rezolvarea cerintei, am folosit subprogramele sens, noul_x, noul_y, afisare_tabla apelate din int main(). 
+	Sens este apelat din main avand ca parametru o variabila de tip char in care citim w, a, s, sau d, si pt fiecare returneaza caracterul '^','<','>', sau 'v', pe care il retinem in variabila c (aceasta reprezinta de fapt jucatorul care isi schimba orientarea in functie de comanda). 
+	Subprogramele noul_x si noul_y returneaza valoarea noua a coordonatelor x si y dupa tastarea unei comenzi si totodata asigura ca jucatorul sa nu depaseasca marginea tablei de joc. 
+	afisare_tabla afiseaza cu ajutorul a doua "for"-uri marginile tablei si spatiu sau caracterul jucatorului in functie de coordonatele acestuia.
+	In main, intr-un "do ...while" care are conditia de oprire tastarea caracterului 'q', sunt apelate functiile, iar in cazul in care jucatorul a ajuns la coordonatele (M,N) folosim comanda afisam mesajul "GAME COMPLETED" si folosim comnda "break" pentru a parasi instructiunea de repetitie. 
+
+	2. Adaugam la programul de la taskul precedent subprogramele noul_l1, noul_c1. Acestea sunt folosite pentru a modifica coordonatele obstacolelor mobile pentru a se apropia de jucator.
+	In main mai este citit in plus numarul de obstacole (P), si coordonatele fiecaruia, impreuna cu tipul (fix sau mobil). Daca jucatorul si obstacolele ajung sa aiba aceleasi coordonate, jocul este oprit (exista 3 instructiuni "if" care verifica acest lucru). 
+	In subprogramul afisare_tabla sunt adaugate conditiile ca pentru fiecare coordonata citita pentru un obstacol sa fie asezate in locul respectiv caracterele 'x'. De asemena, am introdus variabila k, care este initializata cu 0 si este incrementata de fiecare data cand jucatorul se misca, si reinitializata cand ajunge a valoarea 2, pentru a schimba coordonatele obstacolelor mobile numai dupa ce jucatorul apuca sa fac a doua mutare.
